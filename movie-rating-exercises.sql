@@ -25,7 +25,8 @@ where mID in (	select Movie.mID
 select title
 from Movie
 where mID not in 
-(	-- this query finds all mIDs for movies rated by Chris Jackson, that guarantees that we are not going to consider a movie rated by him, even if it was rated by other reviewer
+(	-- this query finds all mIDs for movies rated by Chris Jackson, that guarantees that we are not going to consider a movie rated by him, 
+	-- even if it was rated by other reviewer
 	select mID 
 	from Rating
 	where rID = (	-- this query finds Chris Jackson's rID
