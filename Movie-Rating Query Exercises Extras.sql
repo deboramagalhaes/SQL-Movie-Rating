@@ -129,7 +129,7 @@ having avg(stars) = (	 select min(avg_rating)
 -- Q12 For each director, return the director's name together with the title(s) of the movie(s) 
 -- they directed that received the highest rating among all of their movies, and the value of that rating. 
 
-select Aux1.Director, Aux1.Title, max_rating_per_title as [Director's highest rating]
+select Aux1.Director, Aux1.Title, max_rating_per_title as [Directors highest rating]
 from	(	-- first, as we may have more than one rating per title, lets find out the highest rating for each title
 			-- note that, as some directors have directed more than one movie, we'll have repeated director's name in this auxiliar table
 			select	director, 
